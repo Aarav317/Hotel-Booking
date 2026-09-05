@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+
+    "configurations": [
+        {
+            "name": "Run Flask Website",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "Running on (https?://\\S+)"
+            }
+        }
+    ]
+}

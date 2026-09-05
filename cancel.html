@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Cancel Booking - DineAhead</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f1eb;
+            margin: 0;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .box {
+            background-color: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #e8a83e;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 25px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 90%;
+            padding: 13px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 13px 30px;
+            background-color: #e8a83e;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d99625;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            color: #222;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="box">
+
+        <h1>Cancel Booking</h1>
+
+        <p>
+            Enter your Booking ID to cancel your reservation.
+        </p>
+
+
+        <form action="/cancel-booking" method="POST">
+
+            <label>Booking ID</label>
+
+            <input
+                type="number"
+                name="booking_id"
+                placeholder="Example: 5"
+                required
+            >
+
+
+            <button type="submit">
+                Cancel Booking
+            </button>
+
+        </form>
+
+
+        <a href="/" class="back">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>

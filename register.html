@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Create Account - DineAhead</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #09e06a;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+        }
+
+        .register-box {
+            width: 90%;
+            max-width: 450px;
+
+            background-color: rgb(224, 15, 15);
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        .logo span {
+            color: #3b09e1;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+
+            padding: 14px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #69dcae;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #db424f;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background-color: #de8f0f;
+
+            color: black;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #754b06;
+        }
+
+        .login-text {
+            margin-top: 20px;
+
+            color: #555;
+        }
+
+        .login-text a {
+            color: #e8a83e;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .back {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            color: #333;
+
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="register-box">
+
+        <div class="logo">
+            Dine<span>Ahead</span>
+        </div>
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Create your account to book a table.
+        </p>
+
+
+        <form action="/register" method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+            >
+
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+            >
+
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+            >
+
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+
+        <p class="login-text">
+
+            Already have an account?
+
+            <a href="/login">
+                Login
+            </a>
+
+        </p>
+
+
+        <a href="/" class="back">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>

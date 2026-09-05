@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DineAhead</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            DineAhead<span>.</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/menu">Menu</a>
+
+            <a href="/booking">Book Table</a>
+
+            {% if session.get("user_id") %}
+
+                <a href="/my-bookings">My Bookings</a>
+
+                <span class="welcome">
+                    Hi, {{ session.get("user_name") }} 👋
+                </span>
+
+                <a href="/logout" class="logout">
+                    Logout
+                </a>
+
+            {% else %}
+
+                <a href="/login" class="login-link">
+                    Login
+                </a>
+
+                <a href="/register" class="register-link">
+                    Register
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                SMART DINING EXPERIENCE
+            </p>
+
+            {% if session.get("user_id") %}
+
+                <p class="welcome-text">
+                    Welcome back, {{ session.get("user_name") }} 👋
+                </p>
+
+            {% endif %}
+
+            <h1>
+                Your Table.<br>
+                Your Food.<br>
+                <span>Before You Arrive.</span>
+            </h1>
+
+            <p class="description">
+                Book your restaurant table and explore the menu
+                before reaching the hotel.
+            </p>
+
+            <div class="buttons">
+
+                <a href="/booking" class="btn">
+                    Book a Table
+                </a>
+
+                <a href="/menu" class="btn secondary">
+                    View Menu
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <div class="feature-card">
+
+            <div class="feature-number">
+                01
+            </div>
+
+            <h3>
+                Choose Table
+            </h3>
+
+            <p>
+                Select your preferred date, time and number of guests.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-number">
+                02
+            </div>
+
+            <h3>
+                Explore Menu
+            </h3>
+
+            <p>
+                Check food items and decide what you want before arriving.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-number">
+                03
+            </div>
+
+            <h3>
+                Enjoy Dining
+            </h3>
+
+            <p>
+                Arrive at the hotel and enjoy a ready table and faster service.
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

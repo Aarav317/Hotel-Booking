@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Table - DineAhead</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <div class="logo">
+            DineAhead
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/menu">Menu</a>
+
+            <a href="/booking">Book Table</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Booking Section -->
+
+    <section class="booking-section">
+
+        <div class="booking-box">
+
+            <p class="small-title">
+                RESERVE YOUR TABLE
+            </p>
+
+            <h1>
+                Book Before You Arrive
+            </h1>
+
+
+            <form method="POST">
+
+                <!-- Name -->
+
+                <label>
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <!-- Hotel -->
+
+                <label>
+                    Select Hotel
+                </label>
+
+                <select name="hotel" required>
+
+                    <option value="">
+                        Choose a hotel
+                    </option>
+
+                    <option value="Grand Palace">
+                        Grand Palace
+                    </option>
+
+                    <option value="Royal Garden">
+                        Royal Garden
+                    </option>
+
+                    <option value="Urban Dine">
+                        Urban Dine
+                    </option>
+
+                </select>
+
+
+                <!-- Date -->
+
+                <label>
+                    Select Date
+                </label>
+
+                <input
+                    type="date"
+                    name="date"
+                    required
+                >
+
+
+                <!-- Time -->
+
+                <label>
+                    Select Time
+                </label>
+
+                <input
+                    type="time"
+                    name="time"
+                    required
+                >
+
+
+                <!-- Guests -->
+
+                <label>
+                    Number of Guests
+                </label>
+
+                <select name="guests" required>
+
+                    <option value="1">
+                        1 Guest
+                    </option>
+
+                    <option value="2">
+                        2 Guests
+                    </option>
+
+                    <option value="3">
+                        3 Guests
+                    </option>
+
+                    <option value="4">
+                        4 Guests
+                    </option>
+
+                    <option value="5">
+                        5 Guests
+                    </option>
+
+                    <option value="6">
+                        6 Guests
+                    </option>
+
+                </select>
+
+
+                <!-- Submit -->
+
+                <button type="submit">
+                    Confirm Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
