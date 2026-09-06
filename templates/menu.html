@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Menu - DineAhead</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+
+        /* =========================
+           MENU PAGE
+        ========================= */
+
+        .menu-page {
+            min-height: 100vh;
+            background: #f7f4ef;
+        }
+
+        .menu-hero {
+            padding: 85px 10% 70px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #171717,
+                    #252525
+                );
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .menu-hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 260px;
+            height: 260px;
+
+            right: 8%;
+            top: -100px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(232,168,78,0.25);
+        }
+
+        .menu-hero-content {
+            max-width: 700px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .menu-label {
+            color: #e8a84e;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 18px;
+        }
+
+        .menu-hero h1 {
+            font-size: clamp(45px, 6vw, 70px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 20px;
+        }
+
+        .menu-hero h1 span {
+            color: #e8a84e;
+        }
+
+        .menu-hero p {
+            max-width: 560px;
+
+            color: #cccccc;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           MENU CONTENT
+        ========================= */
+
+        .menu-content {
+            padding: 65px 10% 90px;
+        }
+
+        .menu-heading {
+            display: flex;
+
+            align-items: end;
+
+            justify-content: space-between;
+
+            margin-bottom: 30px;
+        }
+
+        .menu-heading h2 {
+            font-size: 32px;
+
+            letter-spacing: -1px;
+        }
+
+        .menu-heading p {
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOD GRID
+        ========================= */
+
+        .modern-menu-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+        .modern-food-card {
+            background: white;
+
+            border: 1px solid #ebe4da;
+
+            border-radius: 16px;
+
+            padding: 14px;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+
+            position: relative;
+        }
+
+        .modern-food-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(0,0,0,0.09);
+        }
+
+
+        /* FOOD IMAGE */
+
+        .modern-food-image {
+            height: 190px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #f3eee7;
+
+            border-radius: 12px;
+
+            font-size: 72px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* CARD CONTENT */
+
+        .food-info {
+            padding: 3px 7px 8px;
+        }
+
+        .food-info h3 {
+            font-size: 19px;
+
+            margin-bottom: 7px;
+        }
+
+        .food-info p {
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            min-height: 45px;
+        }
+
+        .food-bottom {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-top: 16px;
+        }
+
+        .price {
+            font-size: 18px;
+
+            font-weight: 700;
+
+            color: #d78920;
+        }
+
+        .order-btn {
+            text-decoration: none;
+
+            background: #111;
+
+            color: white;
+
+            padding: 9px 13px;
+
+            border-radius: 6px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #e8a84e;
+
+            color: #111;
+        }
+
+
+        /* =========================
+           BOTTOM CTA
+        ========================= */
+
+        .menu-cta {
+            margin-top: 60px;
+
+            padding: 45px;
+
+            background: #111;
+
+            color: white;
+
+            border-radius: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .menu-cta h2 {
+            font-size: 28px;
+
+            margin-bottom: 8px;
+        }
+
+        .menu-cta p {
+            color: #aaa;
+
+            font-size: 14px;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            background: #e8a84e;
+
+            color: #111;
+
+            text-decoration: none;
+
+            padding: 14px 22px;
+
+            border-radius: 7px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #f4bd69;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .modern-menu-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .menu-hero {
+                padding: 65px 7%;
+            }
+
+            .menu-hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .menu-content {
+                padding: 50px 7%;
+            }
+
+            .menu-heading {
+                align-items: start;
+
+                flex-direction: column;
+
+                gap: 8px;
+            }
+
+            .modern-menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-cta {
+                padding: 30px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        DineAhead<span>.</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/menu">
+            Menu
+        </a>
+
+        <a href="/booking">
+            Book Table
+        </a>
+
+        {% if session.get("user_id") %}
+
+            <a href="/my-bookings">
+                My Bookings
+            </a>
+
+            <span class="welcome">
+                Hi, {{ session.get("user_name") }} 👋
+            </span>
+
+            <a href="/logout"
+               class="logout">
+                Logout
+            </a>
+
+        {% else %}
+
+            <a href="/login"
+               class="login-link">
+                Login
+            </a>
+
+            <a href="/register"
+               class="register-link">
+                Register
+            </a>
+
+        {% endif %}
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     MENU HERO
+========================= -->
+
+<main class="menu-page">
+
+    <section class="menu-hero">
+
+        <div class="menu-hero-content">
+
+            <div class="menu-label">
+                DINEAHEAD MENU
+            </div>
+
+            <h1>
+                Taste the <span>Experience.</span>
+            </h1>
+
+            <p>
+                Explore our carefully selected dishes before
+                you arrive. Choose your favourites and make
+                your dining experience even better.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MENU ITEMS
+    ========================= -->
+
+    <section class="menu-content">
+
+        <div class="menu-heading">
+
+            <h2>
+                Our Selection
+            </h2>
+
+            <p>
+                Fresh • Delicious • Made with care
+            </p>
+
+        </div>
+
+
+        <div class="modern-menu-grid">
+
+
+            <!-- ITEM 1 -->
+
+            <div class="modern-food-card">
+
+                <div class="modern-food-image">
+                    🍕
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Margherita Pizza
+                    </h3>
+
+                    <p>
+                        Fresh tomato, mozzarella and
+                        aromatic basil.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₹299
+                        </span>
+
+                        <a href="/booking"
+                           class="order-btn">
+                            Book Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 2 -->
+
+            <div class="modern-food-card">
+
+                <div class="modern-food-image">
+                    🍝
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Creamy Pasta
+                    </h3>
+
+                    <p>
+                        Rich creamy sauce with herbs
+                        and perfectly cooked pasta.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₹249
+                        </span>
+
+                        <a href="/booking"
+                           class="order-btn">
+                            Book Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 3 -->
+
+            <div class="modern-food-card">
+
+                <div class="modern-food-image">
+                    🍔
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Classic Burger
+                    </h3>
+
+                    <p>
+                        Juicy patty, fresh vegetables
+                        and our signature sauce.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₹199
+                        </span>
+
+                        <a href="/booking"
+                           class="order-btn">
+                            Book Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 4 -->
+
+            <div class="modern-food-card">
+
+                <div class="modern-food-image">
+                    🍛
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Special Biryani
+                    </h3>
+
+                    <p>
+                        Fragrant basmati rice with
+                        aromatic spices.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₹329
+                        </span>
+
+                        <a href="/booking"
+                           class="order-btn">
+                            Book Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 5 -->
+
+            <div class="modern-food-card">
+
+                <div class="modern-food-image">
+                    🥗
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Fresh Salad
+                    </h3>
+
+                    <p>
+                        Fresh vegetables with a light
+                        and refreshing dressing.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₹179
+                        </span>
+
+                        <a href="/booking"
+                           class="order-btn">
+                            Book Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 6 -->
+
+            <div class="modern-food-card">
+
+                <div class="modern-food-image">
+                    🍜
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Asian Noodles
+                    </h3>
+
+                    <p>
+                        Stir-fried noodles with fresh
+                        vegetables and spices.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₹229
+                        </span>
+
+                        <a href="/booking"
+                           class="order-btn">
+                            Book Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 7 -->
+
+            <div class="modern-food-card">
+
+                <div class="modern-food-image">
+                    🍰
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Chocolate Cake
+                    </h3>
+
+                    <p>
+                        Soft chocolate cake with
+                        rich chocolate layers.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₹159
+                        </span>
+
+                        <a href="/booking"
+                           class="order-btn">
+                            Book Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 8 -->
+
+            <div class="modern-food-card">
+
+                <div class="modern-food-image">
+                    ☕
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Premium Coffee
+                    </h3>
+
+                    <p>
+                        Freshly brewed aromatic coffee
+                        served hot.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="price">
+                            ₹129
+                        </span>
+
+                        <a href="/booking"
+                           class="order-btn">
+                            Book Table
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             CTA
+        ========================= -->
+
+        <div class="menu-cta">
+
+            <div>
+
+                <h2>
+                    Found something you like?
+                </h2>
+
+                <p>
+                    Reserve your table before you arrive.
+                </p>
+
+            </div>
+
+            <a href="/booking"
+               class="cta-button">
+                Book Your Table →
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>
