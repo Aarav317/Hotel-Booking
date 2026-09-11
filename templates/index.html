@@ -4,7 +4,9 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>DineAhead</title>
 
@@ -15,7 +17,9 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
     <nav>
 
@@ -33,23 +37,28 @@
 
             {% if session.get("user_id") %}
 
-                <a href="/my-bookings">My Bookings</a>
+                <a href="/my-bookings">
+                    My Bookings
+                </a>
 
                 <span class="welcome">
                     Hi, {{ session.get("user_name") }} 👋
                 </span>
 
-                <a href="/logout" class="logout">
+                <a href="/logout"
+                   class="logout">
                     Logout
                 </a>
 
             {% else %}
 
-                <a href="/login" class="login-link">
+                <a href="/login"
+                   class="login-link">
                     Login
                 </a>
 
-                <a href="/register" class="register-link">
+                <a href="/register"
+                   class="register-link">
                     Register
                 </a>
 
@@ -60,7 +69,9 @@
     </nav>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
 
@@ -86,7 +97,8 @@
 
             <p class="description">
                 Book your restaurant table and explore the menu
-                before reaching the hotel.
+                before reaching the hotel. Plan your dining
+                experience before you arrive.
             </p>
 
             <div class="buttons">
@@ -96,7 +108,7 @@
                 </a>
 
                 <a href="/menu" class="btn secondary">
-                    View Menu
+                    Explore Menu
                 </a>
 
             </div>
@@ -106,61 +118,410 @@
     </section>
 
 
-    <!-- FEATURES -->
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="home-intro">
+
+        <div class="section-label">
+            WHY DINEAHEAD
+        </div>
+
+        <h2>
+            A simpler way to plan your dining.
+        </h2>
+
+        <p>
+            DineAhead helps you plan your restaurant visit
+            before you reach the hotel. Check the menu,
+            reserve your table and arrive with everything
+            ready.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
 
     <section class="features">
 
-        <div class="feature-card">
+        <div class="section-heading">
 
-            <div class="feature-number">
-                01
+            <div>
+
+                <div class="section-label">
+                    HOW IT WORKS
+                </div>
+
+                <h2>
+                    Three simple steps.
+                </h2>
+
             </div>
 
-            <h3>
-                Choose Table
-            </h3>
-
             <p>
-                Select your preferred date, time and number of guests.
+                From choosing a table to enjoying your meal,
+                DineAhead keeps the process simple.
             </p>
 
         </div>
 
 
-        <div class="feature-card">
+        <div class="feature-grid">
 
-            <div class="feature-number">
-                02
+
+            <!-- STEP 01 -->
+
+            <a href="/booking"
+               class="feature-card feature-link">
+
+                <div class="feature-number">
+                    01
+                </div>
+
+                <h3>
+                    Choose Table
+                </h3>
+
+                <p>
+                    Select your preferred date, time and
+                    number of guests before you arrive.
+                </p>
+
+                <span class="feature-action">
+                    Book your table →
+                </span>
+
+            </a>
+
+
+            <!-- STEP 02 -->
+
+            <a href="/menu"
+               class="feature-card feature-link">
+
+                <div class="feature-number">
+                    02
+                </div>
+
+                <h3>
+                    Explore Menu
+                </h3>
+
+                <p>
+                    Browse the available dishes and decide
+                    what you would like before reaching
+                    the restaurant.
+                </p>
+
+                <span class="feature-action">
+                    View the menu →
+                </span>
+
+            </a>
+
+
+            <!-- STEP 03 -->
+
+            <a href="#why-dineahead"
+               class="feature-card feature-link">
+
+                <div class="feature-number">
+                    03
+                </div>
+
+                <h3>
+                    Enjoy Dining
+                </h3>
+
+                <p>
+                    Arrive with your table already planned
+                    and spend more time enjoying your meal.
+                </p>
+
+                <span class="feature-action">
+                    See the benefits →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY DINEAHEAD
+    ========================== -->
+
+    <section class="why-section"
+             id="why-dineahead">
+
+        <div class="why-heading">
+
+            <div class="section-label">
+                THE DINEAHEAD IDEA
             </div>
 
-            <h3>
-                Explore Menu
-            </h3>
-
-            <p>
-                Check food items and decide what you want before arriving.
-            </p>
+            <h2>
+                Less waiting.<br>
+                Better planning.
+            </h2>
 
         </div>
 
 
-        <div class="feature-card">
+        <div class="why-grid">
 
-            <div class="feature-number">
-                03
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    01
+                </div>
+
+                <h3>
+                    Plan Before Arriving
+                </h3>
+
+                <p>
+                    Instead of deciding everything after
+                    reaching the restaurant, you can prepare
+                    your visit in advance.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    02
+                </div>
+
+                <h3>
+                    Know the Menu
+                </h3>
+
+                <p>
+                    Explore dishes before your visit so you
+                    already have an idea of what you want
+                    to order.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    03
+                </div>
+
+                <h3>
+                    Easy Booking
+                </h3>
+
+                <p>
+                    Select your date, time and guests through
+                    a simple booking form without unnecessary
+                    steps.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about-section">
+
+        <div class="about-content">
+
+            <div class="section-label">
+                ABOUT DINEAHEAD
+            </div>
+
+            <h2>
+                Built to make restaurant visits easier.
+            </h2>
+
+            <p>
+                DineAhead is a simple restaurant booking
+                platform that combines table reservations
+                with menu browsing in one place.
+            </p>
+
+            <p>
+                The idea is simple: make the important
+                decisions before arriving so the dining
+                experience feels smoother once you reach
+                the restaurant.
+            </p>
+
+            <a href="/menu"
+               class="text-link">
+                Explore the menu →
+            </a>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <div class="about-box-number">
+                DINE
             </div>
 
             <h3>
-                Enjoy Dining
+                Ahead of the moment.
             </h3>
 
             <p>
-                Arrive at the hotel and enjoy a ready table and faster service.
+                Plan your visit first.
+                Enjoy your meal next.
             </p>
 
         </div>
 
     </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="home-cta">
+
+        <div>
+
+            <div class="section-label">
+                READY TO DINE?
+            </div>
+
+            <h2>
+                Reserve your table before you arrive.
+            </h2>
+
+            <p>
+                Choose your date, time and guests in just
+                a few simple steps.
+            </p>
+
+        </div>
+
+        <a href="/booking"
+           class="cta-button">
+            Book Your Table →
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                DineAhead<span>.</span>
+            </div>
+
+            <p>
+                Smart dining, planned ahead.
+                Book your table and explore the menu
+                before you arrive.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="/">
+                    Home
+                </a>
+
+                <a href="/menu">
+                    Menu
+                </a>
+
+                <a href="/booking">
+                    Book Table
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Account
+                </h4>
+
+                {% if session.get("user_id") %}
+
+                    <a href="/my-bookings">
+                        My Bookings
+                    </a>
+
+                    <a href="/logout">
+                        Logout
+                    </a>
+
+                {% else %}
+
+                    <a href="/login">
+                        Login
+                    </a>
+
+                    <a href="/register">
+                        Register
+                    </a>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 DineAhead. All rights reserved.
+        </p>
+
+        <p>
+            Built with Flask & Python
+        </p>
+
+    </div>
+
+</footer>
 
 </body>
 

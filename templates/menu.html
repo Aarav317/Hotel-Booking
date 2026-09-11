@@ -171,28 +171,42 @@
         }
 
 
-        /* FOOD IMAGE */
+        /* =========================
+           REAL FOOD IMAGE
+        ========================= */
 
         .modern-food-image {
             height: 190px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
 
             background: #f3eee7;
 
             border-radius: 12px;
 
-            font-size: 72px;
+            overflow: hidden;
 
             margin-bottom: 18px;
         }
 
+        .modern-food-image img {
+            width: 100%;
 
-        /* CARD CONTENT */
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.35s ease;
+        }
+
+        .modern-food-card:hover .modern-food-image img {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================
+           CARD CONTENT
+        ========================= */
 
         .food-info {
             padding: 3px 7px 8px;
@@ -492,7 +506,12 @@
             <div class="modern-food-card">
 
                 <div class="modern-food-image">
-                    🍕
+
+                    <img
+                        src="{{ url_for('static', filename='images/pizza.png') }}"
+                        alt="Margherita Pizza"
+                    >
+
                 </div>
 
                 <div class="food-info">
@@ -509,7 +528,7 @@
                     <div class="food-bottom">
 
                         <span class="price">
-                            ₹299
+                            ₹399
                         </span>
 
                         <a href="/booking"
@@ -529,7 +548,12 @@
             <div class="modern-food-card">
 
                 <div class="modern-food-image">
-                    🍝
+
+                    <img
+                        src="{{ url_for('static', filename='images/pasta.png') }}"
+                        alt="Creamy Pasta"
+                    >
+
                 </div>
 
                 <div class="food-info">
@@ -566,7 +590,12 @@
             <div class="modern-food-card">
 
                 <div class="modern-food-image">
-                    🍔
+
+                    <img
+                        src="{{ url_for('static', filename='images/Burger.png') }}"
+                        alt="Classic Burger"
+                    >
+
                 </div>
 
                 <div class="food-info">
@@ -603,7 +632,12 @@
             <div class="modern-food-card">
 
                 <div class="modern-food-image">
-                    🍛
+
+                    <img
+                        src="{{ url_for('static', filename='images/SpecialBiryani.png') }}"
+                        alt="Special Biryani"
+                    >
+
                 </div>
 
                 <div class="food-info">
@@ -640,7 +674,12 @@
             <div class="modern-food-card">
 
                 <div class="modern-food-image">
-                    🥗
+
+                    <img
+                        src="{{ url_for('static', filename='images/salad.png') }}"
+                        alt="Fresh Salad"
+                    >
+
                 </div>
 
                 <div class="food-info">
@@ -677,7 +716,12 @@
             <div class="modern-food-card">
 
                 <div class="modern-food-image">
-                    🍜
+
+                    <img
+                        src="{{ url_for('static', filename='images/noodles.png') }}"
+                        alt="Asian Noodles"
+                    >
+
                 </div>
 
                 <div class="food-info">
@@ -714,7 +758,12 @@
             <div class="modern-food-card">
 
                 <div class="modern-food-image">
-                    🍰
+
+                    <img
+                        src="{{ url_for('static', filename='images/cake.png') }}"
+                        alt="Chocolate Cake"
+                    >
+
                 </div>
 
                 <div class="food-info">
@@ -731,7 +780,7 @@
                     <div class="food-bottom">
 
                         <span class="price">
-                            ₹159
+                            ₹359
                         </span>
 
                         <a href="/booking"
@@ -751,7 +800,12 @@
             <div class="modern-food-card">
 
                 <div class="modern-food-image">
-                    ☕
+
+                    <img
+                        src="{{ url_for('static', filename='images/coffee.png') }}"
+                        alt="Premium Coffee"
+                    >
+
                 </div>
 
                 <div class="food-info">
@@ -788,7 +842,7 @@
 
         <!-- =========================
              CTA
-        ========================= -->
+        ========================== -->
 
         <div class="menu-cta">
 
