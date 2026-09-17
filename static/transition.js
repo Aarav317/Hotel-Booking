@@ -19,9 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(overlay);
 
 
-    /* =========================
-       OPEN CURRENT PAGE
-       ========================= */
+    /*OPEN CURRENT PAGE*/
 
     setTimeout(function () {
 
@@ -30,9 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
 
 
-    /* =========================
-       PAGE LINKS
-       ========================= */
+    /*PAGE LINKS */
 
     const links = document.querySelectorAll("a[href]");
 

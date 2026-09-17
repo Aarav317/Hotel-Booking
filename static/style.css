@@ -1,18 +1,13 @@
-/* =========================================================
-   DINEAHEAD - MAIN STYLE
-   ========================================================= */
+```css
+/* Main CSS file for DineAhead website */
 
 
-/* =========================
-   FONTS
-   ========================= */
+/* Fonts used in the website */
 
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
 
-/* =========================
-   RESET
-   ========================= */
+/* Basic reset for all elements */
 
 * {
     margin: 0;
@@ -24,11 +19,15 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Default body style */
+
 body {
     font-family: "Instrument Sans", Arial, sans-serif;
     background: #f7f4ef;
     color: #171717;
 }
+
+/* Heading fonts */
 
 h1,
 h2,
@@ -39,9 +38,7 @@ h4,
 }
 
 
-/* =========================
-   NAVBAR
-   ========================= */
+/* Navbar design */
 
 nav {
     height: 80px;
@@ -63,6 +60,8 @@ nav {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Website logo */
+
 .logo {
     font-size: 28px;
     font-weight: 700;
@@ -72,6 +71,8 @@ nav {
 .logo span {
     color: #e8a84e;
 }
+
+/* Navigation links */
 
 .nav-links {
     display: flex;
@@ -89,6 +90,8 @@ nav {
     transition: 0.3s ease;
 }
 
+/* Link hover effect */
+
 .nav-links a:hover {
     color: #e8a84e;
 }
@@ -98,6 +101,8 @@ nav {
     font-size: 14px;
     font-weight: 600;
 }
+
+/* Login button */
 
 .login-link {
     padding: 9px 16px;
@@ -110,6 +115,8 @@ nav {
 .login-link:hover {
     border-color: #e8a84e;
 }
+
+/* Register button */
 
 .register-link {
     padding: 10px 17px;
@@ -127,14 +134,14 @@ nav {
     background: #f4bd69;
 }
 
+/* Logout link */
+
 .logout {
     color: #ffb6b6 !important;
 }
 
 
-/* =========================
-   HERO
-   ========================= */
+/* Hero section */
 
 .hero {
     min-height: calc(100vh - 80px);
@@ -165,6 +172,8 @@ nav {
     animation: heroAppear 0.8s ease;
 }
 
+/* Hero text animation */
+
 @keyframes heroAppear {
 
     from {
@@ -177,6 +186,8 @@ nav {
         transform: translateY(0);
     }
 }
+
+/* Small heading above main heading */
 
 .small-title {
     color: #e8a84e;
@@ -198,6 +209,8 @@ nav {
     margin-bottom: 12px;
 }
 
+/* Main hero heading */
+
 .hero h1 {
     color: white;
 
@@ -214,6 +227,8 @@ nav {
     color: #e8a84e;
 }
 
+/* Hero description */
+
 .description {
     max-width: 570px;
 
@@ -227,9 +242,7 @@ nav {
 }
 
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* Buttons */
 
 .buttons {
     display: flex;
@@ -254,6 +267,8 @@ nav {
     transition: 0.3s ease;
 }
 
+/* Button hover effect */
+
 .btn:hover {
     transform: translateY(-3px);
 
@@ -273,9 +288,7 @@ nav {
 }
 
 
-/* =========================
-   HOME INTRO
-   ========================= */
+/* Home introduction section */
 
 .home-intro {
     padding: 95px 10% 80px;
@@ -318,9 +331,7 @@ nav {
 }
 
 
-/* =========================
-   COMMON SECTION HEADING
-   ========================= */
+/* Common section heading */
 
 .section-heading {
     display: flex;
@@ -351,9 +362,7 @@ nav {
 }
 
 
-/* =========================================================
-   HOTEL SECTION
-   ========================================================= */
+/* Hotel section */
 
 .hotel-section {
     padding: 90px 10%;
@@ -393,7 +402,7 @@ nav {
 }
 
 
-/* Hotel grid */
+/* Hotel cards grid */
 
 .hotel-grid {
     display: grid;
@@ -423,6 +432,8 @@ nav {
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
+
+/* Hotel card hover */
 
 .hotel-card:hover {
     transform: translateY(-7px);
@@ -460,12 +471,14 @@ nav {
     transition: transform 0.5s ease;
 }
 
+/* Zoom image when hovering */
+
 .hotel-card:hover .hotel-image img {
     transform: scale(1.06);
 }
 
 
-/* Hotel image label */
+/* Small label on hotel image */
 
 .hotel-image span {
     position: absolute;
@@ -536,9 +549,7 @@ nav {
 }
 
 
-/* =========================
-   HOW IT WORKS
-   ========================= */
+/* How it works section */
 
 .features {
     padding: 90px 10%;
@@ -553,6 +564,8 @@ nav {
 
     gap: 22px;
 }
+
+/* Feature card */
 
 .feature-card {
     display: block;
@@ -576,6 +589,8 @@ nav {
     text-decoration: none;
 }
 
+/* Small circle decoration */
+
 .feature-card::after {
     content: "";
 
@@ -593,6 +608,8 @@ nav {
 
     border-radius: 50%;
 }
+
+/* Feature card hover */
 
 .feature-card:hover {
     transform: translateY(-6px);
@@ -642,9 +659,7 @@ nav {
 }
 
 
-/* =========================
-   WHY DINEAHEAD
-   ========================= */
+/* Why DineAhead section */
 
 .why-section {
     padding: 100px 10%;
@@ -679,6 +694,8 @@ nav {
 
     gap: 22px;
 }
+
+/* Why section cards */
 
 .why-card {
     padding: 32px;
@@ -717,9 +734,7 @@ nav {
 }
 
 
-/* =========================
-   ABOUT
-   ========================= */
+/* About section */
 
 .about-section {
     display: grid;
@@ -759,6 +774,8 @@ nav {
     margin-bottom: 16px;
 }
 
+/* About page link */
+
 .text-link {
     display: inline-block;
 
@@ -774,6 +791,8 @@ nav {
 .text-link:hover {
     color: #171717;
 }
+
+/* About information box */
 
 .about-box {
     background: #111;
@@ -818,9 +837,7 @@ nav {
 }
 
 
-/* =========================
-   HOME CTA
-   ========================= */
+/* Home call to action section */
 
 .home-cta {
     margin: 0 10% 90px;
@@ -858,6 +875,8 @@ nav {
     line-height: 1.6;
 }
 
+/* CTA button */
+
 .cta-button {
     display: inline-block;
 
@@ -885,9 +904,7 @@ nav {
 }
 
 
-/* =========================
-   MENU
-   ========================= */
+/* Menu section */
 
 .menu-section {
     padding: 80px 10%;
@@ -899,6 +916,8 @@ nav {
     margin-bottom: 40px;
 }
 
+/* Food cards grid */
+
 .menu-grid {
     display: grid;
 
@@ -906,6 +925,8 @@ nav {
 
     gap: 24px;
 }
+
+/* Food card */
 
 .food-card {
     background: white;
@@ -928,6 +949,8 @@ nav {
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.09);
 }
+
+/* Food emoji/image area */
 
 .food-image {
     font-size: 60px;
@@ -954,9 +977,7 @@ nav {
 }
 
 
-/* =========================
-   BOOKING
-   ========================= */
+/* Booking section */
 
 .booking-section {
     min-height: 90vh;
@@ -977,6 +998,8 @@ nav {
         ),
         #f7f4ef;
 }
+
+/* Booking form box */
 
 .booking-box {
     width: 500px;
@@ -999,6 +1022,8 @@ nav {
     margin-bottom: 30px;
 }
 
+/* Form layout */
+
 form {
     display: flex;
 
@@ -1015,6 +1040,8 @@ label {
     font-weight: 700;
 }
 
+/* Input and select fields */
+
 input,
 select {
     padding: 14px;
@@ -1030,6 +1057,8 @@ select {
     transition: 0.2s;
 }
 
+/* Input focus effect */
+
 input:focus,
 select:focus {
     border-color: #e8a84e;
@@ -1037,6 +1066,8 @@ select:focus {
     box-shadow:
         0 0 0 3px rgba(232, 168, 78, 0.15);
 }
+
+/* Form button */
 
 button {
     margin-top: 20px;
@@ -1067,9 +1098,7 @@ button:hover {
 }
 
 
-/* =========================
-   FOOTER
-   ========================= */
+/* Footer */
 
 .site-footer {
     background: #0d0d0d;
@@ -1078,6 +1107,8 @@ button:hover {
 
     padding: 60px 10% 25px;
 }
+
+/* Instagram link in footer */
 
 .footer-instagram {
     margin-bottom: 35px;
@@ -1098,6 +1129,8 @@ button:hover {
 .footer-instagram a:hover {
     color: #f4bd69;
 }
+
+/* Footer main content */
 
 .footer-content {
     display: flex;
@@ -1138,6 +1171,8 @@ button:hover {
     font-size: 14px;
 }
 
+/* Footer navigation links */
+
 .footer-links {
     display: flex;
 
@@ -1170,6 +1205,8 @@ button:hover {
     color: #e8a84e;
 }
 
+/* Bottom part of footer */
+
 .footer-bottom {
     padding-top: 22px;
 
@@ -1185,15 +1222,11 @@ button:hover {
 }
 
 
-/* =========================================================
-   PAGE TRANSITION
-   ========================================================= */
+/* Page transition animation */
 
 /*
-   IMPORTANT:
-   This animation works with transition.js
-
-   Tiles enter from LEFT -> RIGHT.
+   This animation works with transition.js.
+   The tiles cover the page and then disappear.
 */
 
 .page-transition {
@@ -1216,7 +1249,7 @@ button:hover {
 }
 
 
-/* Individual tile */
+/* Individual transition tile */
 
 .transition-tile {
     background: #111;
@@ -1230,16 +1263,14 @@ button:hover {
 }
 
 
-/* Opening animation */
+/* Hide transition tiles */
 
 .page-transition.hide .transition-tile {
     transform: scaleX(0);
 }
 
 
-/* =========================
-   TABLET
-   ========================= */
+/* Tablet screen */
 
 @media (max-width: 1100px) {
 
@@ -1254,9 +1285,7 @@ button:hover {
 }
 
 
-/* =========================
-   TABLET
-   ========================= */
+/* Smaller tablet screen */
 
 @media (max-width: 900px) {
 
@@ -1287,9 +1316,7 @@ button:hover {
 }
 
 
-/* =========================
-   MOBILE
-   ========================= */
+/* Mobile screen */
 
 @media (max-width: 650px) {
 
@@ -1312,7 +1339,7 @@ button:hover {
     }
 
 
-    /* Hero */
+    /* Hero on mobile */
 
     .hero {
         min-height: 85vh;
@@ -1335,7 +1362,7 @@ button:hover {
     }
 
 
-    /* Sections */
+    /* Sections on mobile */
 
     .home-intro,
     .features,
@@ -1346,7 +1373,7 @@ button:hover {
     }
 
 
-    /* Hotel */
+    /* Hotel cards on mobile */
 
     .hotel-section .section-heading {
         margin-bottom: 30px;
@@ -1363,7 +1390,7 @@ button:hover {
     }
 
 
-    /* CTA */
+    /* CTA on mobile */
 
     .home-cta {
         margin: 0 7% 60px;
@@ -1376,14 +1403,14 @@ button:hover {
     }
 
 
-    /* Menu */
+    /* Menu on mobile */
 
     .menu-grid {
         grid-template-columns: 1fr;
     }
 
 
-    /* Booking */
+    /* Booking form on mobile */
 
     .booking-section {
         padding: 30px 15px;
@@ -1396,7 +1423,7 @@ button:hover {
     }
 
 
-    /* Footer */
+    /* Footer on mobile */
 
     .footer-content {
         flex-direction: column;
@@ -1427,9 +1454,7 @@ button:hover {
 }
 
 
-/* =========================
-   VERY SMALL MOBILE
-   ========================= */
+/* Very small mobile screens */
 
 @media (max-width: 400px) {
 
@@ -1454,3 +1479,4 @@ button:hover {
     }
 
 }
+```
