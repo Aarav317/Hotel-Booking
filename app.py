@@ -6,9 +6,8 @@ app = Flask(__name__)
 
 app.secret_key = "dineahead-secret-key"
 
-# ==============================
-# DATABASE CONNECTION
-# ==============================
+
+# Database connection
 
 def get_db():
     connection = sqlite3.connect("dineahead.db")
@@ -16,9 +15,7 @@ def get_db():
     return connection
 
 
-# ==============================
-# CREATE DATABASE
-# ==============================
+# Create database
 
 def create_database():
 
@@ -81,27 +78,22 @@ def create_database():
     connection.commit()
     connection.close()
 
-    
-# ==============================
-# HOME PAGE
-# ==============================
+
+# Home page
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
 
-# ==============================
-# MENU PAGE
-# ==============================
+# Menu page
 
 @app.route("/menu")
 def menu():
     return render_template("menu.html")
 
-# ==============================
-# REGISTER PAGE
-# ==============================
+
+# Register page
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -175,9 +167,8 @@ def register():
 
     return render_template("register.html")
 
-# ==============================
-# LOGIN PAGE
-# ==============================
+
+# Login page
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -236,9 +227,7 @@ def login():
     return render_template("login.html")
 
 
-# ==============================
-# BOOKING PAGE
-# ==============================
+# Booking page
 
 @app.route("/booking", methods=["GET", "POST"])
 def booking():
@@ -386,9 +375,8 @@ def booking():
 
     return render_template("booking.html")
 
-# ==============================
-# MY BOOKINGS
-# ==============================
+
+# My bookings
 
 @app.route("/my-bookings")
 def my_bookings():
@@ -412,9 +400,9 @@ def my_bookings():
         "my_bookings.html",
         bookings=bookings
     )
-# ==============================
-# LOGOUT
-# ==============================
+
+
+# Logout
 
 @app.route("/logout")
 def logout():
@@ -425,9 +413,8 @@ def logout():
     # Go back to home page
     return redirect("/")
 
-# ==============================
-# USER CANCEL PAGE
-# ==============================
+
+# User cancel page
 
 @app.route("/cancel")
 def cancel_page():
@@ -435,9 +422,7 @@ def cancel_page():
     return render_template("cancel.html")
 
 
-# ==============================
-# USER CANCEL BOOKING
-# ==============================
+# Cancel booking
 
 @app.route("/cancel-booking", methods=["POST"])
 def cancel_booking_form():
@@ -589,9 +574,7 @@ def cancel_booking_form():
     """
 
 
-# ==============================
-# ADMIN DELETE BOOKING
-# ==============================
+# Admin delete booking
 
 @app.route("/delete/<int:id>")
 def delete_booking(id):
@@ -609,10 +592,7 @@ def delete_booking(id):
     return redirect("/admin")
 
 
-# ==============================
-# ADMIN DASHBOARD
-# ==============================
-
+# Admin dashboard
 
 @app.route("/admin")
 def admin():
@@ -658,9 +638,7 @@ def admin():
     )
 
 
-# ==============================
-# START FLASK
-# ==============================
+# Start Flask
 
 if __name__ == "__main__":
 

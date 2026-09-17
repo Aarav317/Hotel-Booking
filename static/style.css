@@ -1,6 +1,18 @@
-/* ==============================
+/* =========================================================
+   DINEAHEAD - MAIN STYLE
+   ========================================================= */
+
+
+/* =========================
+   FONTS
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,400..700&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+
+/* =========================
    RESET
-============================== */
+   ========================= */
 
 * {
     margin: 0;
@@ -13,15 +25,23 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Instrument Sans", Arial, sans-serif;
     background: #f7f4ef;
     color: #171717;
 }
 
+h1,
+h2,
+h3,
+h4,
+.logo {
+    font-family: "Google Sans Flex", Arial, sans-serif;
+}
 
-/* ==============================
+
+/* =========================
    NAVBAR
-============================== */
+   ========================= */
 
 nav {
     height: 80px;
@@ -66,7 +86,7 @@ nav {
     font-size: 14px;
     font-weight: 500;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -112,9 +132,9 @@ nav {
 }
 
 
-/* ==============================
+/* =========================
    HERO
-============================== */
+   ========================= */
 
 .hero {
     min-height: calc(100vh - 80px);
@@ -141,6 +161,7 @@ nav {
 
 .hero-content {
     max-width: 720px;
+
     animation: heroAppear 0.8s ease;
 }
 
@@ -206,9 +227,9 @@ nav {
 }
 
 
-/* ==============================
+/* =========================
    BUTTONS
-============================== */
+   ========================= */
 
 .buttons {
     display: flex;
@@ -230,7 +251,7 @@ nav {
 
     border-radius: 7px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -252,9 +273,9 @@ nav {
 }
 
 
-/* ==============================
+/* =========================
    HOME INTRO
-============================== */
+   ========================= */
 
 .home-intro {
     padding: 95px 10% 80px;
@@ -297,15 +318,9 @@ nav {
 }
 
 
-/* ==============================
-   HOW IT WORKS
-============================== */
-
-.features {
-    padding: 90px 10%;
-
-    background: #ffffff;
-}
+/* =========================
+   COMMON SECTION HEADING
+   ========================= */
 
 .section-heading {
     display: flex;
@@ -333,6 +348,202 @@ nav {
     line-height: 1.7;
 
     font-size: 15px;
+}
+
+
+/* =========================================================
+   HOTEL SECTION
+   ========================================================= */
+
+.hotel-section {
+    padding: 90px 10%;
+
+    background: #ffffff;
+}
+
+
+/* Hotel heading */
+
+.hotel-section .section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 40px;
+
+    margin-bottom: 40px;
+}
+
+.hotel-section .section-heading h2 {
+    font-size: clamp(34px, 4vw, 48px);
+
+    letter-spacing: -1.5px;
+}
+
+.hotel-section .section-heading > p {
+    max-width: 390px;
+
+    color: #707070;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* Hotel grid */
+
+.hotel-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 24px;
+
+    width: 100%;
+}
+
+
+/* Hotel card */
+
+.hotel-card {
+    background: #f7f4ef;
+
+    border: 1px solid #ebe4da;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    color: inherit;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Hotel image */
+
+.hotel-image {
+    width: 100%;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #e9e2d8;
+
+    position: relative;
+}
+
+.hotel-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.hotel-card:hover .hotel-image img {
+    transform: scale(1.06);
+}
+
+
+/* Hotel image label */
+
+.hotel-image span {
+    position: absolute;
+
+    left: 18px;
+
+    bottom: 16px;
+
+    background: rgba(17, 17, 17, 0.85);
+
+    color: white;
+
+    padding: 7px 11px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    z-index: 2;
+}
+
+
+/* Hotel information */
+
+.hotel-info {
+    padding: 25px;
+}
+
+.hotel-info h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.hotel-info p {
+    color: #686868;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+
+/* Hotel button */
+
+.hotel-button {
+    display: inline-block;
+
+    color: #b87519;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.hotel-button:hover {
+    color: #171717;
+}
+
+
+/* =========================
+   HOW IT WORKS
+   ========================= */
+
+.features {
+    padding: 90px 10%;
+
+    background: #ffffff;
 }
 
 .feature-grid {
@@ -386,7 +597,8 @@ nav {
 .feature-card:hover {
     transform: translateY(-6px);
 
-    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.08);
 }
 
 .feature-number {
@@ -430,9 +642,9 @@ nav {
 }
 
 
-/* ==============================
+/* =========================
    WHY DINEAHEAD
-============================== */
+   ========================= */
 
 .why-section {
     padding: 100px 10%;
@@ -505,9 +717,9 @@ nav {
 }
 
 
-/* ==============================
+/* =========================
    ABOUT
-============================== */
+   ========================= */
 
 .about-section {
     display: grid;
@@ -606,9 +818,9 @@ nav {
 }
 
 
-/* ==============================
+/* =========================
    HOME CTA
-============================== */
+   ========================= */
 
 .home-cta {
     margin: 0 10% 90px;
@@ -663,7 +875,7 @@ nav {
 
     white-space: nowrap;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .cta-button:hover {
@@ -673,9 +885,9 @@ nav {
 }
 
 
-/* ==============================
+/* =========================
    MENU
-============================== */
+   ========================= */
 
 .menu-section {
     padding: 80px 10%;
@@ -704,7 +916,8 @@ nav {
 
     border: 1px solid #ebe4da;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
 
     transition: 0.3s;
 }
@@ -712,7 +925,8 @@ nav {
 .food-card:hover {
     transform: translateY(-6px);
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.09);
 }
 
 .food-image {
@@ -740,9 +954,9 @@ nav {
 }
 
 
-/* ==============================
+/* =========================
    BOOKING
-============================== */
+   ========================= */
 
 .booking-section {
     min-height: 90vh;
@@ -775,7 +989,8 @@ nav {
 
     border: 1px solid #e8dfd3;
 
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.10);
 }
 
 .booking-box h1 {
@@ -819,7 +1034,8 @@ input:focus,
 select:focus {
     border-color: #e8a84e;
 
-    box-shadow: 0 0 0 3px rgba(232, 168, 78, 0.15);
+    box-shadow:
+        0 0 0 3px rgba(232, 168, 78, 0.15);
 }
 
 button {
@@ -851,9 +1067,9 @@ button:hover {
 }
 
 
-/* ==============================
+/* =========================
    FOOTER
-============================== */
+   ========================= */
 
 .site-footer {
     background: #0d0d0d;
@@ -861,6 +1077,26 @@ button:hover {
     color: white;
 
     padding: 60px 10% 25px;
+}
+
+.footer-instagram {
+    margin-bottom: 35px;
+}
+
+.footer-instagram a {
+    color: #e8a84e;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.footer-instagram a:hover {
+    color: #f4bd69;
 }
 
 .footer-content {
@@ -872,7 +1108,8 @@ button:hover {
 
     padding-bottom: 45px;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
 }
 
 .footer-brand {
@@ -948,9 +1185,78 @@ button:hover {
 }
 
 
-/* ==============================
-   MOBILE - TABLET
-============================== */
+/* =========================================================
+   PAGE TRANSITION
+   ========================================================= */
+
+/*
+   IMPORTANT:
+   This animation works with transition.js
+
+   Tiles enter from LEFT -> RIGHT.
+*/
+
+.page-transition {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+
+    grid-template-rows: repeat(5, 1fr);
+
+    z-index: 99999;
+
+    pointer-events: none;
+}
+
+
+/* Individual tile */
+
+.transition-tile {
+    background: #111;
+
+    transform: scaleX(1);
+
+    transform-origin: left center;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+/* Opening animation */
+
+.page-transition.hide .transition-tile {
+    transform: scaleX(0);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+
+    .hotel-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
 
 @media (max-width: 900px) {
 
@@ -971,22 +1277,19 @@ button:hover {
         grid-template-columns: 1fr;
     }
 
-    .section-heading {
+    .section-heading,
+    .hotel-section .section-heading {
         flex-direction: column;
 
         align-items: flex-start;
     }
 
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 }
 
 
-/* ==============================
+/* =========================
    MOBILE
-============================== */
+   ========================= */
 
 @media (max-width: 650px) {
 
@@ -1008,6 +1311,9 @@ button:hover {
         gap: 10px;
     }
 
+
+    /* Hero */
+
     .hero {
         min-height: 85vh;
 
@@ -1028,12 +1334,36 @@ button:hover {
         max-width: 260px;
     }
 
+
+    /* Sections */
+
     .home-intro,
     .features,
     .why-section,
-    .about-section {
+    .about-section,
+    .hotel-section {
         padding: 70px 7%;
     }
+
+
+    /* Hotel */
+
+    .hotel-section .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .hotel-image {
+        height: 210px;
+    }
+
+
+    /* CTA */
 
     .home-cta {
         margin: 0 7% 60px;
@@ -1045,9 +1375,15 @@ button:hover {
         align-items: flex-start;
     }
 
+
+    /* Menu */
+
     .menu-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* Booking */
 
     .booking-section {
         padding: 30px 15px;
@@ -1058,6 +1394,9 @@ button:hover {
 
         padding: 30px 22px;
     }
+
+
+    /* Footer */
 
     .footer-content {
         flex-direction: column;
@@ -1078,20 +1417,40 @@ button:hover {
     .site-footer {
         padding: 50px 7% 22px;
     }
+
     .footer-instagram {
-    text-align: center;
-    margin-bottom: 35px;
+        text-align: center;
+
+        margin-bottom: 35px;
+    }
+
 }
 
-.footer-instagram a {
-    color: #e8a84e;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-}
 
-.footer-instagram a:hover {
-    color: #f4bd69;
-}
+/* =========================
+   VERY SMALL MOBILE
+   ========================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hotel-info {
+        padding: 20px;
+    }
+
+    .feature-card {
+        padding: 28px;
+    }
+
+    .home-cta {
+        padding: 26px;
+    }
 
 }

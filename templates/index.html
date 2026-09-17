@@ -17,9 +17,7 @@
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
+    <!-- Main navigation -->
 
     <nav>
 
@@ -45,20 +43,17 @@
                     Hi, {{ session.get("user_name") }} 👋
                 </span>
 
-                <a href="/logout"
-                   class="logout">
+                <a href="/logout" class="logout">
                     Logout
                 </a>
 
             {% else %}
 
-                <a href="/login"
-                   class="login-link">
+                <a href="/login" class="login-link">
                     Login
                 </a>
 
-                <a href="/register"
-                   class="register-link">
+                <a href="/register" class="register-link">
                     Register
                 </a>
 
@@ -69,9 +64,7 @@
     </nav>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- Hero section -->
 
     <section class="hero">
 
@@ -118,9 +111,7 @@
     </section>
 
 
-    <!-- =========================
-         INTRO
-    ========================== -->
+    <!-- Short introduction -->
 
     <section class="home-intro">
 
@@ -142,9 +133,7 @@
     </section>
 
 
-    <!-- =========================
-         HOW IT WORKS
-    ========================== -->
+    <!-- How DineAhead works -->
 
     <section class="features">
 
@@ -172,8 +161,7 @@
 
         <div class="feature-grid">
 
-
-            <!-- STEP 01 -->
+            <!-- First step -->
 
             <a href="/booking"
                class="feature-card feature-link">
@@ -198,7 +186,7 @@
             </a>
 
 
-            <!-- STEP 02 -->
+            <!-- Second step -->
 
             <a href="/menu"
                class="feature-card feature-link">
@@ -224,7 +212,7 @@
             </a>
 
 
-            <!-- STEP 03 -->
+            <!-- Third step -->
 
             <a href="#why-dineahead"
                class="feature-card feature-link">
@@ -248,18 +236,167 @@
 
             </a>
 
+        </div>
+
+    </section>
+
+
+    <!-- Hotel selection -->
+
+    <section class="hotel-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-label">
+                    FIND YOUR HOTEL
+                </div>
+
+                <h2>
+                    Choose where you want to dine.
+                </h2>
+
+            </div>
+
+            <p>
+                Select a hotel, explore its dining options
+                and reserve your table before you arrive.
+            </p>
+
+        </div>
+
+
+        <div class="hotel-grid">
+
+
+            <!-- Hotel one -->
+
+            <div class="hotel-card">
+
+               <div class="hotel-image">
+    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
+         alt="The Grand Palace">
+    <span>HOTEL</span>
+</div>
+
+                <div class="hotel-info">
+
+                    <h3>
+                        The Grand Palace
+                    </h3>
+
+                    <p>
+                        A premium dining experience with
+                        comfortable seating and a wide menu.
+                    </p>
+
+                    <a href="/login" class="hotel-button">
+                        View Hotel →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hotel two -->
+
+            <div class="hotel-card">
+
+                <div class="hotel-image">
+    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=80"
+         alt="Royal Orchid Hotel">
+    <span>HOTEL</span>
+</div>
+
+                <div class="hotel-info">
+
+                    <h3>
+                        Royal Orchid Hotel
+                    </h3>
+
+                    <p>
+                        Enjoy a relaxing atmosphere with
+                        carefully selected dining options.
+                    </p>
+
+                    <a href="/login" class="hotel-button">
+                        View Hotel →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hotel three -->
+
+            <div class="hotel-card">
+
+                <div class="hotel-image">
+    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80"
+         alt="Taj Garden">
+    <span>HOTEL</span>
+</div>
+
+                <div class="hotel-info">
+
+                    <h3>
+                        Taj Garden
+                    </h3>
+
+                    <p>
+                        A modern hotel dining destination
+                        designed for comfortable visits.
+                    </p>
+
+                    <a href="/login" class="hotel-button">
+                        View Hotel →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hotel four -->
+
+            <div class="hotel-card">
+
+                <div class="hotel-image">
+    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=80"
+         alt="The Fern Residency">
+    <span>HOTEL</span>
+</div>
+
+                <div class="hotel-info">
+
+                    <h3>
+                        The Fern Residency
+                    </h3>
+
+                    <p>
+                        Discover a comfortable dining space
+                        and plan your visit in advance.
+                    </p>
+
+                    <a href="/login" class="hotel-button">
+                        View Hotel →
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         WHY DINEAHEAD
-    ========================== -->
+    <!-- Why DineAhead -->
 
-    <section class="why-section"
-             id="why-dineahead">
+    <section class="why-section" id="why-dineahead">
 
         <div class="why-heading">
 
@@ -276,7 +413,6 @@
 
 
         <div class="why-grid">
-
 
             <div class="why-card">
 
@@ -334,15 +470,12 @@
 
             </div>
 
-
         </div>
 
     </section>
 
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
+    <!-- About the project -->
 
     <section class="about-section">
 
@@ -369,8 +502,7 @@
                 the restaurant.
             </p>
 
-            <a href="/menu"
-               class="text-link">
+            <a href="/menu" class="text-link">
                 Explore the menu →
             </a>
 
@@ -397,9 +529,7 @@
     </section>
 
 
-    <!-- =========================
-         FINAL CTA
-    ========================== -->
+    <!-- Final booking section -->
 
     <section class="home-cta">
 
@@ -420,115 +550,113 @@
 
         </div>
 
-        <a href="/booking"
-           class="cta-button">
+        <a href="/booking" class="cta-button">
             Book Your Table →
         </a>
 
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- Footer -->
 
     <footer class="site-footer">
-        
+
         <div class="footer-instagram">
-          <a href="https://www.instagram.com/aaravgupta317/"
-            target="_blank">
-             @aaravgupta317
-          </a>
+
+            <a href="https://www.instagram.com/aaravgupta317/"
+               target="_blank">
+                @aaravgupta317
+            </a>
+
         </div>
 
-    <div class="footer-content">
+        <div class="footer-content">
 
-        <div class="footer-brand">
+            <div class="footer-brand">
 
-            <div class="footer-logo">
-                DineAhead<span>.</span>
+                <div class="footer-logo">
+                    DineAhead<span>.</span>
+                </div>
+
+                <p>
+                    Smart dining, planned ahead.
+                    Book your table and explore the menu
+                    before you arrive.
+                </p>
+
             </div>
 
+
+            <div class="footer-links">
+
+                <div>
+
+                    <h4>
+                        Quick Links
+                    </h4>
+
+                    <a href="/">Home</a>
+
+                    <a href="/menu">Menu</a>
+
+                    <a href="/booking">Book Table</a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Account
+                    </h4>
+
+                    {% if session.get("user_id") %}
+
+                        <a href="/my-bookings">
+                            My Bookings
+                        </a>
+
+                        <a href="/logout">
+                            Logout
+                        </a>
+
+                    {% else %}
+
+                        <a href="/login">
+                            Login
+                        </a>
+
+                        <a href="/register">
+                            Register
+                        </a>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
             <p>
-                Smart dining, planned ahead.
-                Book your table and explore the menu
-                before you arrive.
+                © 2026 DineAhead. All rights reserved.
+            </p>
+
+            <p>
+                Built with Flask & Python
             </p>
 
         </div>
 
-
-        <div class="footer-links">
-
-            <div>
-
-                <h4>
-                    Quick Links
-                </h4>
-
-                <a href="/">
-                    Home
-                </a>
-
-                <a href="/menu">
-                    Menu
-                </a>
-
-                <a href="/booking">
-                    Book Table
-                </a>
-
-            </div>
+    </footer>
 
 
-            <div>
+    <!-- Page transition script -->
 
-                <h4>
-                    Account
-                </h4>
-
-                {% if session.get("user_id") %}
-
-                    <a href="/my-bookings">
-                        My Bookings
-                    </a>
-
-                    <a href="/logout">
-                        Logout
-                    </a>
-
-                {% else %}
-
-                    <a href="/login">
-                        Login
-                    </a>
-
-                    <a href="/register">
-                        Register
-                    </a>
-
-                {% endif %}
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 DineAhead. All rights reserved.
-        </p>
-
-        <p>
-            Built with Flask & Python
-        </p>
-
-    </div>
-
-</footer>
+    <script src="{{ url_for('static', filename='transition.js') }}"></script>
 
 </body>
 
