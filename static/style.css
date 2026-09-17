@@ -22,7 +22,8 @@ html {
 /* Default body style */
 
 body {
-    font-family: "Instrument Sans", Arial, sans-serif;
+     margin: 0;
+     font-family: "Instrument Sans", Arial, sans-serif;
     background: #f7f4ef;
     color: #171717;
 }
