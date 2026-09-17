@@ -17,7 +17,7 @@
 
 <body>
 
-    <!-- Main navigation -->
+    <!-- Navigation bar -->
 
     <nav>
 
@@ -64,7 +64,7 @@
     </nav>
 
 
-    <!-- Hero section -->
+    <!-- Main hero area -->
 
     <section class="hero">
 
@@ -133,7 +133,7 @@
     </section>
 
 
-    <!-- How DineAhead works -->
+    <!-- How the website works -->
 
     <section class="features">
 
@@ -161,7 +161,7 @@
 
         <div class="feature-grid">
 
-            <!-- First step -->
+            <!-- Step one -->
 
             <a href="/booking"
                class="feature-card feature-link">
@@ -186,7 +186,7 @@
             </a>
 
 
-            <!-- Second step -->
+            <!-- Step two -->
 
             <a href="/menu"
                class="feature-card feature-link">
@@ -212,7 +212,7 @@
             </a>
 
 
-            <!-- Third step -->
+            <!-- Step three -->
 
             <a href="#why-dineahead"
                class="feature-card feature-link">
@@ -274,11 +274,15 @@
 
             <div class="hotel-card">
 
-               <div class="hotel-image">
-    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
-         alt="The Grand Palace">
-    <span>HOTEL</span>
-</div>
+                <div class="hotel-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
+                        alt="The Grand Palace">
+
+                    <span>HOTEL</span>
+
+                </div>
 
                 <div class="hotel-info">
 
@@ -291,9 +295,19 @@
                         comfortable seating and a wide menu.
                     </p>
 
-                    <a href="/login" class="hotel-button">
-                        View Hotel →
-                    </a>
+                    {% if session.get("user_id") %}
+
+                        <a href="/booking" class="hotel-button">
+                            Book Table →
+                        </a>
+
+                    {% else %}
+
+                        <a href="/login" class="hotel-button">
+                            View Hotel →
+                        </a>
+
+                    {% endif %}
 
                 </div>
 
@@ -305,10 +319,14 @@
             <div class="hotel-card">
 
                 <div class="hotel-image">
-    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=80"
-         alt="Royal Orchid Hotel">
-    <span>HOTEL</span>
-</div>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=80"
+                        alt="Royal Orchid Hotel">
+
+                    <span>HOTEL</span>
+
+                </div>
 
                 <div class="hotel-info">
 
@@ -321,9 +339,19 @@
                         carefully selected dining options.
                     </p>
 
-                    <a href="/login" class="hotel-button">
-                        View Hotel →
-                    </a>
+                    {% if session.get("user_id") %}
+
+                        <a href="/booking" class="hotel-button">
+                            Book Table →
+                        </a>
+
+                    {% else %}
+
+                        <a href="/login" class="hotel-button">
+                            View Hotel →
+                        </a>
+
+                    {% endif %}
 
                 </div>
 
@@ -335,10 +363,14 @@
             <div class="hotel-card">
 
                 <div class="hotel-image">
-    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80"
-         alt="Taj Garden">
-    <span>HOTEL</span>
-</div>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80"
+                        alt="Taj Garden">
+
+                    <span>HOTEL</span>
+
+                </div>
 
                 <div class="hotel-info">
 
@@ -351,9 +383,19 @@
                         designed for comfortable visits.
                     </p>
 
-                    <a href="/login" class="hotel-button">
-                        View Hotel →
-                    </a>
+                    {% if session.get("user_id") %}
+
+                        <a href="/booking" class="hotel-button">
+                            Book Table →
+                        </a>
+
+                    {% else %}
+
+                        <a href="/login" class="hotel-button">
+                            View Hotel →
+                        </a>
+
+                    {% endif %}
 
                 </div>
 
@@ -365,10 +407,14 @@
             <div class="hotel-card">
 
                 <div class="hotel-image">
-    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=80"
-         alt="The Fern Residency">
-    <span>HOTEL</span>
-</div>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=900&q=80"
+                        alt="The Fern Residency">
+
+                    <span>HOTEL</span>
+
+                </div>
 
                 <div class="hotel-info">
 
@@ -381,9 +427,19 @@
                         and plan your visit in advance.
                     </p>
 
-                    <a href="/login" class="hotel-button">
-                        View Hotel →
-                    </a>
+                    {% if session.get("user_id") %}
+
+                        <a href="/booking" class="hotel-button">
+                            Book Table →
+                        </a>
+
+                    {% else %}
+
+                        <a href="/login" class="hotel-button">
+                            View Hotel →
+                        </a>
+
+                    {% endif %}
 
                 </div>
 
@@ -475,7 +531,7 @@
     </section>
 
 
-    <!-- About the project -->
+    <!-- About section -->
 
     <section class="about-section">
 
@@ -529,7 +585,7 @@
     </section>
 
 
-    <!-- Final booking section -->
+    <!-- Final call to action -->
 
     <section class="home-cta">
 
@@ -565,10 +621,13 @@
 
             <a href="https://www.instagram.com/aaravgupta317/"
                target="_blank">
+
                 @aaravgupta317
+
             </a>
 
         </div>
+
 
         <div class="footer-content">
 
@@ -595,11 +654,17 @@
                         Quick Links
                     </h4>
 
-                    <a href="/">Home</a>
+                    <a href="/">
+                        Home
+                    </a>
 
-                    <a href="/menu">Menu</a>
+                    <a href="/menu">
+                        Menu
+                    </a>
 
-                    <a href="/booking">Book Table</a>
+                    <a href="/booking">
+                        Book Table
+                    </a>
 
                 </div>
 
@@ -654,7 +719,7 @@
     </footer>
 
 
-    <!-- Page transition script -->
+    <!-- Page transition -->
 
     <script src="{{ url_for('static', filename='transition.js') }}"></script>
 
